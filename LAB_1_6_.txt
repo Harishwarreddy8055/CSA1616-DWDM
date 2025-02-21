@@ -1,0 +1,16 @@
+age_value <- 35
+min_age <- min(ages)
+max_age <- max(ages)
+sd_age <- sd(ages)
+
+# Min-Max Normalization
+min_max_norm <- (age_value - min_age) / (max_age - min_age)
+print(paste("Min-Max Normalized:", min_max_norm))
+
+# Z-Score Normalization
+z_score_norm <- (age_value - mean(ages)) / sd_age
+print(paste("Z-Score Normalized:", z_score_norm))
+
+# Decimal Scaling
+decimal_scaling <- age_value / (10^ceiling(log10(max_age)))
+print(paste("Decimal Scaling:", decimal_scaling))

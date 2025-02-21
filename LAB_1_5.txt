@@ -1,0 +1,11 @@
+ages <- c(23, 35, 45, 50, 60, 65, 30, 32, 34, 38, 40, 41, 46, 47, 55, 57, 58, 62)
+body_fat <- c(15.2, 20.3, 25.1, 30.2, 32.5, 33.1, 18.7, 19.2, 21.3, 22.1, 24.0, 25.2, 28.1, 29.3, 31.2, 33.0, 34.2, 36.5)
+
+print(paste("Mean Age:", mean(ages)))
+print(paste("Median Age:", median(ages)))
+print(paste("SD Age:", sd(ages)))
+boxplot(ages, body_fat, names = c("Age", "Body Fat"), main = "Boxplots of Age and Body Fat")
+boxplot(ages, body_fat, names = c("Age", "Body Fat"), main = "Boxplots of Age and Body Fat")
+plot(ages, body_fat, main = "Scatter Plot of Age vs Body Fat", xlab = "Age", ylab = "Body Fat")
+qqnorm(ages)
+qqline(ages)

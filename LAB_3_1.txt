@@ -1,0 +1,18 @@
+# Install required libraries
+install.packages("arules")
+install.packages("arulesViz")
+
+# Load libraries
+library(arules)
+library(arulesViz)
+
+# Load dataset (example market basket transactions)
+transactions <- read.transactions("market_basket.csv", format = "basket", sep=",")
+
+# Apply Apriori Algorithm
+rules <- apriori(transactions, parameter = list(supp = 3/length(transactions), conf = 0.5))
+inspect(rules)  # View rules
+
+# Apply FP-Growth Algorithm
+rules_fp <- fpgrowth(transactions, parameter = list(supp = 3/length(transactions), conf = 0.5))
+inspect(rules_fp)  # View rules
